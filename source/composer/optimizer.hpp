@@ -92,6 +92,10 @@ namespace composer {
         }
     }
 
+    template <typename algorithm> algorithm optimizer<algorithm>::get_solver() {
+        return this->solver_;
+    }
+
     template <typename algorithm> void optimizer<algorithm>::display() {
         std::cout << this->solver_;
     }

@@ -90,7 +90,9 @@ add_library(composerlib
         composer/optimizer.h
         composer/midi_io.cpp
         composer/midi_io.h
-)
+        composer/statistics.cpp
+        composer/statistics.h
+ )
 
 target_include_directories(composerlib
         PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>

@@ -22,6 +22,8 @@ namespace composer {
 
         void optimize();
 
+        algorithm get_solver();
+
         void display();
 
       private:
