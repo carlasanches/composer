@@ -8,7 +8,7 @@
 CPMAddPackage(
         NAME Catch2
         GITHUB_REPOSITORY catchorg/Catch2
-        VERSION 2.12.1
+        VERSION 3.2.1
         OPTIONS
         "CATCH_USE_VALGRIND OFF"
         "CATCH_BUILD_TESTING OFF"
@@ -27,6 +27,9 @@ include(${Catch2_SOURCE_DIR}/contrib/Catch.cmake)
 
 add_executable(ut_midi_stream ut_midi_stream.cpp)
 target_link_libraries(ut_midi_stream PUBLIC composerlib Catch2)
+
+add_executable(ut_statistics ut_statistics.cpp)
+target_link_libraries(ut_statistics PUBLIC composerlib Catch2)
 
 if (MSVC)
     set_target_properties(ut_midi_stream PROPERTIES
