@@ -7,7 +7,8 @@
 using namespace composer;
 
 TEST_CASE("Best individuals in an empty population") {
-
+	// If the population is empty, there is no need to 
+	// calculate the best individuals.
 	melody_problem p(melody_problem::problem_type::twinkle);
 	optimizer<nsga_ii> ga(0.3, 0.1, 100, 100, p);
 
